@@ -15,11 +15,12 @@ roles:
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
-create_issues:
-    allow_targets:
-        repos:
-            - redhat-developer/rhdh-skills
-            - fullsend-ai/fullsend
+tracker:
+    github:
+        allowed_targets:
+            repos:
+                - redhat-developer/rhdh-skills
+                - fullsend-ai/fullsend
 inference:
     project: rhdh-sidekick-167988
-    wif_provider: projects/189673402608/locations/global/workloadIdentityPools/fullsend-inference/providers/gh-redhat-developer-rhdh-skills
+    wif_provider: projects/189673402608/locations/global/workloadIdentityPools/fullsend-inference/providers/gh-rhdh-parasol-rhdh-skills
