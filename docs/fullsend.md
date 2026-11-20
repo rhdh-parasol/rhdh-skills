@@ -16,7 +16,7 @@ Comment one of these on an issue or pull request.
 | `/fs-code` | Issue | The [code](https://fullsend.sh/docs/agents/code) agent implements the issue and opens a pull request. Add text after the command to give it specific guidance. |
 | `/fs-review` | PR | The [review](https://fullsend.sh/docs/agents/review) agent reviews the pull request. |
 | `/fs-fix` | PR | The [fix](https://fullsend.sh/docs/agents/fix) agent addresses review feedback on the pull request. |
-| `/fs-fix-stop` | PR | Adds the `fullsend-no-fix` label so the fix agent stops responding to that pull request. Remove the label or comment `/fs-fix` to bring it back. |
+| `/fs-fix-stop` | PR | Adds the `fullsend-no-fix` label so the fix agent stops responding to that pull request. The comment must be exactly `/fs-fix-stop` with no other text, and only the PR author or a collaborator with write access can use it; anyone else's comment is ignored. Remove the label or comment `/fs-fix` to bring it back. |
 | `/fs-retro` | Issue or PR | The [retro](https://fullsend.sh/docs/agents/retro) agent analyzes completed work and proposes improvements. |
 | `/fs-prioritize` | Issue or PR | The [prioritize](https://fullsend.sh/docs/agents/prioritize) agent scores the issue for project board ranking. |
 
@@ -54,5 +54,8 @@ An agent pull request is held to the same bar as a human one. CI runs the same
 described in [CONTRIBUTING.md](../CONTRIBUTING.md), and the same repository
 rules apply.
 
-The review agent cannot approve a pull request that touches protected paths
-such as `.github/` workflow files. A human reviewer must approve those changes.
+The [review](https://fullsend.sh/docs/agents/review) agent will not approve a
+pull request that touches its protected paths, such as `.github/` workflow
+files. Nothing in this repository, such as a CODEOWNERS file, adds a required
+human approval on top of that, so maintainers should review those pull requests
+by hand.
