@@ -20,6 +20,13 @@ uv run pytest
 For end-to-end skill use, install the complete pack documented in
 [README.md](README.md), including `/grilling`, `/code-review`, and `/handoff`.
 
+## Use the fullsend agents
+
+fullsend agents triage, implement, review, and fix work in this repository when
+you comment an `/fs-*` command on an issue or pull request. See
+[docs/fullsend.md](docs/fullsend.md) for the commands, configuration, and how
+agent pull requests are checked.
+
 ## Choose the owning module
 
 Before editing, identify the one skill that owns the behavior. Category folders
